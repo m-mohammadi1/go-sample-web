@@ -42,7 +42,7 @@ func (app *application) getTokenFromHeaderAndVerify(w http.ResponseWriter, r *ht
 		return "", nil, errors.New("invalid auth header")
 	}
 
-	// check to see we have Bearer in authheader
+	// check to see we have Bearer in auth-header
 	if headerParts[0] != "Bearer" {
 		return "", nil, errors.New("unauthorizedL no Bearer")
 	}
